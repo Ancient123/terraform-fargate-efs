@@ -1,0 +1,6 @@
+*.tfvars*
+*override.*
+*terraform.*
+.DS_Store
+.terraform*
+crash.*
