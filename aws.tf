@@ -28,8 +28,3 @@ data "aws_subnets" "default" {
     values = [data.aws_vpc.default.id]
   }
 }
-
-# Get default ECS Cluster for Fargate
-data "aws_ecs_cluster" "default" {
-  cluster_name = "Main"
-}

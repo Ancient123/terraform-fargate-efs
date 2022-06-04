@@ -53,7 +53,7 @@ resource "aws_ecs_task_definition" "nginx" {
 
 resource "aws_ecs_service" "nginx" {
   name            = "nginx"
-  cluster         = data.aws_ecs_cluster.default.id
+  cluster         = aws_ecs_cluster.default.id
   desired_count   = 1
   launch_type     = "FARGATE"
   task_definition = aws_ecs_task_definition.nginx.arn
